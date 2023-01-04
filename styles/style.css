@@ -195,71 +195,114 @@ body {
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
 .swiper-pagination-progressbar{
-  width:52.1354166667vw !important;
-  left: 12.5vw!important;
-  background-color: #B1B1B1!important;
-  border-radius: 100px!important;
-  top: unset!important;
-  bottom: 1.5625vw  !important;
+width:52.1354166667vw !important;
+left: 12.5vw!important;
+background-color: #B1B1B1!important;
+border-radius: 100px!important;
+top: unset!important;
+bottom: 1.5625vw  !important;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #D30D2B!important;
-    border-radius: 100px!important;
+background: #D30D2B!important;
+  border-radius: 100px!important;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
-  display: none;
+display: none;
 }
 .swiper-button-next, .swiper-button-prev {
-  background-image: url(../assets/swiper-chevron.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 3.28125vw!important;
-    height: 3.28125vw!important;
-    border-radius: 100px;
-    top: unset!important;
-    bottom: 0;
-  }
+background-image: url(../assets/swiper-chevron.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3.28125vw!important;
+  height: 3.28125vw!important;
+  border-radius: 100px;
+  top: unset!important;
+  bottom: 0;
+}
 .swiper-button-next{
-    right: 12.5vw!important;
+  right: 12.5vw!important;
+}
+.swiper-button-prev{
+  left: unset!important;
+  right:16.9791666667vw!important;
+  transform: scaleX(-1)
+}
+
+.blackOverlay,.redOverlay{
+  transition: .8s all;
+  transform-origin: top;
+}
+.swiper-slide-active.swiper-slide.activeInit .blackOverlay{
+   transform: scaleY(0);
+   transition-delay: .8s!important;
+  
+
+
+}
+.swiper-slide-active.swiper-slide.activeInit .redOverlay{
+   transform: scaleY(0);
+   transition-delay: 1.1s!important;
+  
   }
-  .swiper-button-prev{
-    left: unset!important;
-    right:16.9791666667vw!important;
-    transform: scaleX(-1)
+.swiper-slide{
+  transition-duration:0s!important ;
+  transition-delay: .8s!important;
+}
+
+
+  /* MEDIA QUERY */
+
+
+  @media (max-width: 1024px){
+
+
+    .error .errorHidden{
+      font-size: 14px;
+    }
+    .contact .error .den{
+      top: 100%;
+    }
+    .contact .error .dden{
+      top: 50%;
+    }
+    .contact .error .errorHidden.ch{
+      top: 95% !important;
+    }
   }
+
