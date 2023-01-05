@@ -1,9 +1,74 @@
 
 
+// NAVBAR 
+
+const navbar = document.getElementById("navbar")
+
+
+       
+
+
+window.addEventListener("scroll", (nb) => {
+
+
+    nb.preventDefault()
+
+    const scrolled = window.scrollY
+    if (scrolled >= 200) {
+        navbar.classList.add("navSticky")
+    }
+    else {
+        navbar.classList.remove("navSticky")
+
+
+    }
+
+
+
+
+})
+
+
+// SIDEBAR 
+
+const sidebar = document.getElementById("sidebar")
+
+
+
+function sidebarOpen(){
+sidebar.classList.toggle("opacity")
+
+}
+
+
+// LOTTIE 
 
 function scrollDownn(){
     window.scrollTo(0,window.innerHeight)
 }
+
+// HAMBURGER JS 
+
+
+var menu = document.querySelector(".menu").children[0]
+var spantwo = document.querySelector(".line-2")
+var spanone = document.querySelector(".line-1")
+var spanthree = document.querySelector(".line-3")
+
+
+
+
+menu.onclick = function(){
+spantwo.classList.toggle("li2ne")
+spanone.classList.toggle("l1ine")
+spanthree.classList.toggle("lin3e")
+    
+
+}
+
+
+// CONTACT JS 
+
 
 const btns = document.querySelectorAll('.dropdown-btn')
 const dropdowns = document.querySelectorAll('.dropdown')
