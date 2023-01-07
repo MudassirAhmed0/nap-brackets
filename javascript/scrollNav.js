@@ -13,7 +13,8 @@
  window.addEventListener('scroll',()=>{
  
     let scrolled=window.scrollY
-    
+ console.log(sec6)
+  console.log(scrolled)  
 
    if(scrolled >= sec1 && scrolled < sec2){
     scrollTopBtn.classList.add('opacity-0')
