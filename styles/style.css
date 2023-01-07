@@ -502,13 +502,13 @@ display: none;
 
   .swiper-button-next {
     bottom: unset;
-    top: 215px;
+    top: 215px!important;
     right: 5px!important;
   }
 
   .swiper-button-prev {
     bottom: unset;
-    top: 215px;
+    top: 215px!important;
     left: 35x!important;
   }
 
