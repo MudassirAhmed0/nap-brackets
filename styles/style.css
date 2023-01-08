@@ -132,13 +132,13 @@ nav .main-nav .links li a:hover:before {
 
 
 .overlay {
-  width: 99.9479166667vw;
+  width: 100vw;
   height: 31.09375vw;
   position: absolute;
   background: transparent linear-gradient(180deg, #6D6E71 0%, #44444766 46%, #37373900 100%) 0% 0% no-repeat padding-box;
   opacity: 0.9;
   top: 0;
-  left: 0.05208333333vw;
+  left: 0;
 
 }
 
