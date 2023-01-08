@@ -121,10 +121,13 @@ nav .main-nav .links li a:hover:before {
 
 }
 
+.Send svg,
+.shop.shop svg { 
+  transition: all .5s ease-in-out;
+}
 .Send:hover svg,
 .shop:hover.shop svg {
-  transform: translateX(1.04166666667vw);
-  transition: all .5s ease-in-out;
+  transform: translateX(1.04166666667vw); 
 }
 
 
