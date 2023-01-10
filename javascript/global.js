@@ -124,10 +124,30 @@ const handleSubmit = (e) => {
 
     if (firstErrorIndex) {
 
-        $('html, body').animate({
-            scrollTop: $(els[firstErrorIndex - 1]).offset().top - 150
-        }, 500);
+
+        // this causes error so i commented it
+
+        // $('html, body').animate({
+        //     scrollTop: $(els[firstErrorIndex - 1]).offset().top - 150
+        // }, 500);
+    } 
+    // form submission 
+    else {
+        var requestOptions = {
+                method: 'GET',
+                redirect: 'follow'
+            };
+
+        fetch(`/mail/mail.php?message_subject=${inputs[0].value}&name=${inputs[1].value}&email=${inputs[2].value}&message=${inputs[3].value}`, requestOptions)
+        .then(response => response.text())
+        .then((result) => {
+            console.log(result)
+        })
+        .catch((error) => {
+            console.log('error', error)
+        });
     }
+
 }
 document.querySelector('form').addEventListener('submit', handleSubmit)
 
@@ -192,5 +212,6 @@ for (var i = 0; i < Sidebarlist.length; i++) {
         this.classList.add("active")
     }
 }
+
 
 

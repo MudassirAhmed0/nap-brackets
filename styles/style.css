@@ -75,10 +75,6 @@ body {
   text-transform: capitalize;
 }
 
-.fliped{
-  transform: scaleX(-1);
-}
-
 .our-goal-bg-text {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: #B1B1B1;
@@ -134,10 +130,7 @@ nav .main-nav .links li a:hover:before {
   transform: translateX(1.04166666667vw); 
 }
 
-.rtl .Send:hover svg,
-.rtl .shop:hover.shop svg {
-  transform: translateX(-1.04166666667vw) scaleX(-1); 
-}
+
 
 
 
@@ -223,11 +216,7 @@ label.error {
   border-radius: 50px;
 
 }
-.rtl .listp p::before{
-  left: unset;
-  right: -1.04166666667vw;
 
-}
 
 .sidebar {
 
@@ -410,12 +399,6 @@ body {
   bottom: 1.5625vw !important;
 }
 
-
-.rtl  .swiper-pagination-progressbar{
-left: unset;
-  right: 12.5vw !important;
-}
-
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: #D30D2B !important;
   border-radius: 100px !important;
@@ -443,23 +426,12 @@ left: unset;
   right: 12.5vw !important;
 }
 
-.rtl .swiper-button-next{
-  left: 12.5vw !important;
-  right: unset !important;
-transform: scaleX(-1) !important;
-
-}
-
 .swiper-button-prev {
   left: unset !important;
   right: 16.9791666667vw !important;
   transform: scaleX(-1)
 }
-.rtl .swiper-button-prev {
-  right: unset !important;
-  left: 16.9791666667vw !important;
-transform: scaleX(1);
-}
+
 .blackOverlay,
 .redOverlay {
   transition: .8s all;
@@ -536,12 +508,6 @@ display: none;
     top: 215px!important;
     right: 5px!important;
   }
-.rtl .swiper-button-next {
-  bottom: unset;
-  top: 215px!important;
-  right: 5px!important;
-}
-
 
   .swiper-button-prev {
     bottom: unset;
@@ -549,12 +515,7 @@ display: none;
     left: 5px!important;
   }
 
-  .rtl .swiper-button-prev {
-    bottom: unset;
-    top: 215px!important;
-    left: 5px!important;
-  }
-
+  
 
 
 }
