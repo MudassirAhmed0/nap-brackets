@@ -76,7 +76,7 @@ body {
 }
 
 .fliped{
-  transform: scaleX(-1);
+  transform: scaleX(-1)!important
 }
 
 .our-goal-bg-text {
@@ -254,7 +254,7 @@ label.error {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 10;
 }
-.navSticky  a{
+.navSticky  a:not(.shop){
   padding-bottom: 0!important;
 }
 .navSticky  ul{
@@ -410,7 +410,14 @@ body {
   bottom: 1.5625vw !important;
 }
 
-
+#scrollTop{
+  background-color: #d30d2b;
+  border-radius: 50%;
+  
+}
+#scrollTop img{
+  width: 100%;
+}
 .rtl  .swiper-pagination-progressbar{
 left: unset;
   right: 12.5vw !important;
@@ -437,6 +444,8 @@ left: unset;
   border-radius: 100px;
   top: unset !important;
   bottom: 0;
+  border: 1px solid rgb(38,38,38);
+  background-color: #fff;
 }
 
 .swiper-button-next {
@@ -539,7 +548,8 @@ display: none;
 .rtl .swiper-button-next {
   bottom: unset;
   top: 215px!important;
-  right: 5px!important;
+  right: unset!important;
+  left: 5px!important;
 }
 
 
@@ -552,8 +562,9 @@ display: none;
   .rtl .swiper-button-prev {
     bottom: unset;
     top: 215px!important;
-    left: 5px!important;
-  }
+    left: unset!important;
+    right: 5px!important;
+}
 
 
 
@@ -566,6 +577,10 @@ display: none;
     top: 8px;
     left: -10px;
 
+  }
+  .rtl .listp p::before{
+    right: -10px;
+    left: unset;
   }
 }
 @media (min-width: 768px) {
