@@ -118,8 +118,8 @@ nav .main-nav .links li a:hover:before {
 
 
 
-.Send:hover #Path_3,
-.Send:hover #Path_2 {
+.Send #Path_3,
+.Send #Path_2 {
   stroke: #fff;
   transition: all .5s ease-in-out;
 
@@ -136,7 +136,7 @@ nav .main-nav .links li a:hover:before {
 
 .rtl .Send:hover svg,
 .rtl .shop:hover.shop svg {
-  transform: translateX(-1.04166666667vw) scaleX(-1); 
+  transform: translateX(-1.04166666667vw) scaleX(-1)!important; 
 }
 
 
@@ -446,6 +446,11 @@ left: unset;
   bottom: 0;
   border: 1px solid rgb(38,38,38);
   background-color: #fff;
+  transition: all .5s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+  opacity: 0.7;
 }
 
 .swiper-button-next {
