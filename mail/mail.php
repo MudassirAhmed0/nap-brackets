@@ -29,15 +29,25 @@ if (
         //Server settings
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        // $mail->Host = 'smtp.mailtrap.io';
+        // $mail->SMTPAuth = true;
+        // $mail->Port = 2525;
+        // $mail->Username = 'c6b0b7a2c423a4';
+        // $mail->Password = '7cd136bf961c30';    
+        
+        $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = 'c6b0b7a2c423a4';
-        $mail->Password = '7cd136bf961c30';                                
+        $mail->Port = 587;
+        $mail->Username = 'contactNAP@petromin.com';
+        $mail->Password = 'Cuq83683';    
     
         //Recipients
-        $mail->setFrom('from@example.com', 'Mailer');
-        $mail->addAddress('contactnap@petromin.com', 'Contact Nap');     //Add a recipient
+        $mail->setFrom('contactNAP@petromin.com', 'Contact National Auto Parts - Website');
+
+        $mail->addAddress('sksoury@petromin.com');     //Add a recipient
+        $mail->addAddress('jason.peter@petromin.com');     //Add a recipient
+        
+        $mail->addAddress('abdulhadi@brackets-tech.com');     //Add a recipient
         // $mail->addReplyTo('info@example.com', 'Information');
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
@@ -57,9 +67,11 @@ if (
 
         $mail->send();
     
-        echo 'Message has been sent';
+        echo 'Thank you, one of our representatives will get back to you as soon as possible';
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
+        // Mailer Error: {$mail->ErrorInfo}
+        echo "Message could not be sent. Please try again later.";
     }
 }
 

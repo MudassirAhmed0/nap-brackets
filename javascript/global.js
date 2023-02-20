@@ -28,7 +28,13 @@ window.addEventListener("scroll", (nb) => {
 
 })
 
-
+if(!window.location.href.includes('/en/')){
+    var elems = document.querySelectorAll(["h1", "h4","h5","p",'span']);
+    
+elems.forEach(ele=>{
+     ele.style.lineHeight =  + 4 + parseFloat(getComputedStyle(ele).lineHeight.split('px')[0]) +"px"
+}) 
+}
 // SIDEBAR 
 
 const sidebar = document.getElementById("sidebar")
@@ -62,6 +68,7 @@ menu.onclick = () => {
     spantwo.classList.toggle("li2ne")
     spanone.classList.toggle("l1ine")
     spanthree.classList.toggle("lin3e")
+    document.querySelector('.langFixer').classList.toggle('text-white')
 
 
 }
@@ -133,19 +140,44 @@ const handleSubmit = (e) => {
     } 
     // form submission 
     else {
-        var requestOptions = {
-                method: 'GET',
-                redirect: 'follow'
-            };
+        
+        // grab form
+        var form = document.getElementById("myForm");
 
-        fetch(`/mail/mail.php?message_subject=${inputs[0].value}&name=${inputs[1].value}&email=${inputs[2].value}&message=${inputs[3].value}`, requestOptions)
-        .then(response => response.text())
-        .then((result) => {
-            console.log(result)
-        })
-        .catch((error) => {
-            console.log('error', error)
-        });
+        // show loader
+        var loader = document.createElement("div");
+        // loader.innerHTML = "Loading...";
+        loader.classList.add("loader-style");
+        form.parentNode.insertBefore(loader, form);
+        form.style.display = "none";
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch(`mail/mail.php?message_subject=${inputs[0].value}&name=${inputs[1].value}&email=${inputs[2].value}&message=${inputs[3].value}`, requestOptions)
+            .then(response => response.text())
+            .then((result) => {
+
+                // hide loader 
+                loader.style.display = "none";
+                
+                // show message
+                var message = document.createElement("div");
+                message.innerHTML = result;
+                message.classList.add("thanks-message");
+                form.parentNode.insertBefore(message, form);
+            })
+            .catch((error) => {
+                  
+                // Show form again 
+                form.style.display = "block";
+
+                // hide loader 
+                loader.style.display = "none";
+
+            });
     }
 
 }
